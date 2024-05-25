@@ -1,13 +1,13 @@
-def fibonacci(n: int) -> int:
-    if n==0:
-        return 0
-    elif n==1:
-        return 1
-    return fibonacci(n-1) + fibonacci(n-2)
+def gcd(a:int , b:int) -> int:
+    while b!=0 :
+        rem = a % b
+        a = b
+        b = rem
+    return a
 
-try:
-    n = int(input("Enter the number: "))
-    print(fibonacci(n))
+try: 
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    print(gcd(a,b))
 except ValueError:
-    print("Please enter a valid input")
-    
+    print("Enter a valid input.")
